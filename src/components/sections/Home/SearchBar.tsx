@@ -102,7 +102,7 @@ function SearchField({
     <label className="flex flex-1 cursor-pointer items-center gap-3 rounded-xl px-4 py-3 transition-colors hover:bg-muted">
       <span className="shrink-0 text-primary">{icon}</span>
       <span className="flex min-w-0 flex-1 flex-col">
-        <span className="text-[11px] font-semibold uppercase tracking-wide text-text-muted">
+        <span className="text-[11px] font-semibold uppercase tracking-wide text-text-secondary">
           {label}
         </span>
         <select

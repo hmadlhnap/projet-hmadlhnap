@@ -84,7 +84,7 @@ h6 {
   --text-secondary: 25 15% 40%;
   /* #6B6055 - brun-gris moyen */
 
-  --text-muted: 25 12% 55%;
+ --text-muted: 25 14% 42%;
   /* #948B80 - gris chaud, ex: descriptions FAQ */
 
 
@@ -117,7 +117,7 @@ h6 {
   /* #EBE1D2 - bordure discrète */
 
   /* ─── PRIMARY - Orange Marrakech ─── */
-  --primary: 22 78% 48%;
+  --primary: 22 82% 42%;
   /* #DA5F16 - orange vif principal (boutons, liens, icônes) */
 
   --primary-hover: 22 80% 40%;

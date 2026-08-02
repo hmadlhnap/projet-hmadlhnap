@@ -8,19 +8,21 @@ export default function HeroSection(): React.JSX.Element {
   return (
     <section className="relative w-full">
       <div className="relative min-h-[560px] w-full overflow-hidden lg:min-h-[640px]">
+
         <Image
-          src="/images/marrakech2.jpeg"
+          src="/images/marrakech2.webp"
           alt="Koutoubia Mosque and Jemaa el-Fnaa square in Marrakech at sunset"
           fill
           priority
-          quality={85}
+          fetchPriority="high"
+          quality={75}
           sizes="100vw"
           className="object-cover object-center"
         />
 
         <div
           aria-hidden="true"
-          className="absolute inset-0 bg-gradient-to-r from-secondary/80 via-secondary/10 to-transparent"
+          className="absolute inset-0 bg-gradient-to-r from-secondary/60 via-secondary/10 to-transparent"
         />
 
         {/* Content */}
@@ -46,7 +48,7 @@ export default function HeroSection(): React.JSX.Element {
             <div className="mt-8 flex flex-wrap gap-4">
               <Link
                 href="/destinations"
-                className="inline-flex items-center gap-2 rounded-lg bg-primary px-7 py-3.5 text-sm font-semibold text-primary-foreground shadow-lg transition-colors hover:bg-primary-hover"
+                className="inline-flex items-center gap-2 rounded-lg bg-primary-hover px-7 py-3.5 text-sm font-bold text-primary-foreground shadow-lg transition-colors "
               >
                 <Users className="h-4 w-4" aria-hidden="true" />
                 Private Tours

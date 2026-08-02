@@ -177,7 +177,6 @@ function Logo({ onClick }: { onClick?: () => void }): React.JSX.Element {
         alt="Marrakech Package logo"
         width={144}
         height={38}
-        priority
         quality={85}
         sizes="(max-width: 1023px) 96px, 144px"
         className="h-auto w-24 lg:w-36"
