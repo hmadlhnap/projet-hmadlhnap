@@ -1,0 +1,184 @@
+@import "tailwindcss";
+
+
+body {
+  overflow-x: hidden;
+  font-family: var(--font-manrope), Arial, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-cormorant), Georgia, serif;
+}
+
+
+@theme inline {
+  --font-heading: var(--font-cormorant);
+  --font-body: var(--font-manrope);
+
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+
+  --color-heading: hsl(var(--heading));
+  --color-heading-soft: hsl(var(--heading-soft));
+
+  --color-text-main: hsl(var(--text-main));
+  --color-text-secondary: hsl(var(--text-secondary));
+  --color-text-muted: hsl(var(--text-muted));
+
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+
+  --color-border: hsl(var(--border));
+
+  --color-footer: hsl(var(--footer));
+  --color-footer-foreground: hsl(var(--footer-foreground));
+  --color-footer-muted: hsl(var(--footer-muted));
+  --color-footer-border: hsl(var(--footer-border));
+
+  --color-primary: hsl(var(--primary));
+  --color-primary-hover: hsl(var(--primary-hover));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+
+  --color-gold: hsl(var(--gold));
+  --color-gold-soft: hsl(var(--gold-soft));
+  --color-gold-muted: hsl(var(--gold-muted));
+
+  --color-desert: hsl(var(--desert));
+  --color-surface-soft: hsl(var(--surface-soft));
+
+  --color-whatsapp: hsl(var(--whatsapp));
+  --color-whatsapp-soft: hsl(var(--whatsapp-soft));
+}
+
+
+:root {
+  /* ─── BASE ─── */
+  --background: 36 60% 97%;
+  /* #FDF6EC - crème ivoire très clair, chaud */
+
+  --foreground: 222 35% 12%;
+  /* #12172A - navy quasi-noir */
+
+  /* ─── HEADINGS ─── */
+  --heading: 222 38% 11%;
+  /* #10142A - navy très foncé (ex: "Let's Plan Your Perfect") */
+
+  --heading-soft: 222 25% 30%;
+  /* #38415C - navy moyen pour sous-titres */
+
+  /* ─── TEXT ─── */
+  --text-main: 222 20% 20%;
+  /* #2A2F3F */
+
+  --text-secondary: 25 15% 40%;
+  /* #6B6055 - brun-gris moyen */
+
+  --text-muted: 25 12% 55%;
+  /* #948B80 - gris chaud, ex: descriptions FAQ */
+
+
+  /* ─── FOOTER / DARK BLOCKS ─── */
+ --footer: 206 62% 5%;
+  /* #101830 - navy foncé (ex: bandeau "Ready to Plan Your Adventure?") */
+
+  --footer-foreground: 40 45% 95%;
+  /* #F7F1E4 */
+
+  --footer-muted: 222 15% 65%;
+  /* #A2A8B8 */
+
+  --footer-border: 222 25% 25%;
+  /* #313A52 */
+
+
+  /* ─── SURFACES ─── */
+  --card: 40 60% 99%;
+  /* #FFFCF7 - blanc cassé, cartes */
+
+  --card-foreground: 222 35% 12%;
+
+  --muted: 38 45% 94%;
+  /* #F4ECDF - beige très clair (fond FAQ, sections) */
+
+  --muted-foreground: 25 15% 40%;
+
+  --border: 34 30% 88%;
+  /* #EBE1D2 - bordure discrète */
+
+  /* ─── PRIMARY - Orange Marrakech ─── */
+  --primary: 22 78% 48%;
+  /* #DA5F16 - orange vif principal (boutons, liens, icônes) */
+
+  --primary-hover: 22 80% 40%;
+  /* #B24E12 - orange plus foncé au hover */
+
+  --primary-foreground: 40 60% 98%;
+  /* blanc chaud sur fond orange */
+
+  /* ─── SECONDARY - Navy Marocaine ─── */
+  --secondary: 222 40% 13%;
+  /* #101830 - navy foncé, mêmes tons que footer */
+
+  --secondary-foreground: 40 45% 95%;
+  /* ivoire clair sur fond navy */
+
+  /* ─── GOLD SYSTEM (accents secondaires, icônes fines) ─── */
+  --gold: 30 55% 45%;
+  /* #B27A2F - or/bronze pour petits accents */
+
+  --gold-soft: 30 35% 35%;
+  /* #78603D */
+
+  --gold-muted: 36 50% 92%;
+  /* #F4E9D6 - fond or très léger */
+
+  /* ─── DESERT ─── */
+  --desert: 24 55% 55%;
+  /* #C8813F - terracotta désert (dégradés de fond) */
+
+  /* ─── SURFACE SOFT ─── */
+  --surface-soft: 36 50% 95%;
+  /* #F8F0E4 */
+
+  /* ─── WHATSAPP ─── */
+  --whatsapp: 147 65% 51%;
+  /* #25D366 - vert WhatsApp officiel */
+
+  --whatsapp-soft: 147 45% 92%;
+  /* #DFF6E7 - fond du cercle icône WhatsApp */
+}
+
+
+html,
+body {
+  margin:0;
+  padding:0;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--background));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--gold-soft));
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--gold-soft));
+}
