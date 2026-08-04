@@ -53,7 +53,6 @@ export default function Footer() {
                   alt="Marrakech Package logo"
                   width={66}
                   height={66}
-                  priority
                   className="size-full object-cover transition-transform duration-300 group-hover:scale-105"
                 />
               </span>

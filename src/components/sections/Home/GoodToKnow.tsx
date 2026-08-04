@@ -54,13 +54,13 @@ const CARDS: InfoCard[] = [
 
 export default function GoodToKnow(): React.JSX.Element {
   return (
-    <section className="bg-background py-2 lg:py-6">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-       
+    <section className="bg-background">
+      <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8 lg:py-8">
 
         <div className="mx-auto max-w-4xl text-center">
           <h2 className="text-4xl font-bold text-heading sm:text-5xl">
-            Good to Know Before Your <span className="text-primary">Marrakech Package</span>
+            Good to Know Before Your{" "}
+            <span className="text-primary">Marrakech Package</span>
           </h2>
           <p className="mt-6 text-base leading-relaxed text-text-secondary sm:text-lg">
             Everything you need to know before exploring Marrakech and the

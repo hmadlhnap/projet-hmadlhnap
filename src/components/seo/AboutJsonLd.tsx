@@ -14,6 +14,7 @@ type AboutJsonLdProps = {
 
 export default function AboutJsonLd({siteUrl,email,phone,founderName,city,region,countryCode,latitude,longitude,opens,closes,}: AboutJsonLdProps): React.JSX.Element {
 
+  
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
