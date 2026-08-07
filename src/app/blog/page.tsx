@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import BlogArchive from "@/components/sections/Blog/BlogArchive";
+import BlogArchiveJsonLd from "@/components/seo/BlogArchiveJsonLd";
 
 export const metadata: Metadata = {
-  title: "Morocco Travel Blog | Guides, Tips & Marrakech Stories",
+  title: "Morocco Travel Blog | Guides, Tips & Marrakech package",
   description:
     "Explore Morocco travel guides, Marrakech tips, and destination stories from our local experts. Practical advice for planning an unforgettable Moroccan journey.",
   keywords: [
@@ -44,5 +45,10 @@ export const metadata: Metadata = {
 
 
 export default function BlogPage(): React.JSX.Element {
-  return <BlogArchive currentPage={1} />;
+  return (
+     <>
+    <BlogArchiveJsonLd currentPage={1} />
+    <BlogArchive currentPage={1} />;
+     </>
+  );
 }

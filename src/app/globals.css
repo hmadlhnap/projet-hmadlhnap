@@ -6,12 +6,7 @@ body {
   font-family: var(--font-manrope), Arial, sans-serif;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1,h2,h3,h4,h5,h6 {
   font-family: var(--font-cormorant), Georgia, serif;
 }
 
@@ -81,12 +76,12 @@ h6 {
   --text-main: 222 20% 20%;
   /* #2A2F3F */
 
-  --text-secondary: 25 15% 40%;
-  /* #6B6055 - brun-gris moyen */
+  --text-secondary: 25 18% 30%;
+/* environ #5A4A3F */
 
- --text-muted: 25 14% 42%;
-  /* #948B80 - gris chaud, ex: descriptions FAQ */
-
+/* Brun-gris intermédiaire pour les textes moins importants */
+  --text-muted: 25 14% 42%;
+/* environ #695A4F */
 
   /* ─── FOOTER / DARK BLOCKS ─── */
  --footer: 206 62% 5%;

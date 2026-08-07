@@ -134,8 +134,8 @@ function HeaderContent({ pathname }: { pathname: string }): React.JSX.Element {
 
 function TopUtilityBar(): React.JSX.Element {
   return (
-    <div className="hidden border-b border-border/60 bg-surface-soft sm:block">
-      <div className="mx-auto flex max-w-7xl items-center gap-5 px-4 py-2 text-xs text-text-secondary sm:px-6 lg:px-8">
+    <div className="hidden bg-surface-soft sm:block">
+      <div className="mx-auto flex max-w-7xl items-center justify-end gap-5 px-4 py-1 text-xs text-text-secondary sm:px-6 lg:px-8">
         <a
           href={CONTACT.phoneHref}
           className="group flex items-center gap-2 transition-colors hover:text-primary"

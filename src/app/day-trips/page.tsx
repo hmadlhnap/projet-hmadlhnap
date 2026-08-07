@@ -1,9 +1,51 @@
-import React from 'react'
+import CarteDayTrip from "@/components/sections/day-trips/CarteDayTrip";
+import { getCarteDayTrip } from "@/lib/daytrips";
 
-function page() : React.JSX.Element {
+export default async function DayTripsPage() {
+  const dayTrips = await getCarteDayTrip();
+
   return (
-    <div>page</div>
-  )
-}
+    <section
+      aria-labelledby="day-trips-title"
+      className="bg-background py-6 sm:py-10"
+    >
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto mb-10 max-w-4xl text-center">
+          <h1
+            id="day-trips-title"
+            className="text-2xl font-bold leading-tight text-heading sm:text-3xl lg:text-4xl"
+          >
+            Our Day Trips from <span className="text-primary">Marrakech</span>
+          </h1>
 
-export default page
+          <p className="mx-auto mt-4 max-w-4xl text-base leading-7 text-text-secondary">
+            Make the most of your stay with carefully planned day trips from
+            Marrakech to some of Morocco&apos;s most beautiful destinations.
+            Travel to the Ourika Valley, Ouzoud Waterfalls, Essaouira, Imlil and
+            Ouarzazate while enjoying comfortable transport, authentic local
+            experiences and memorable scenery.
+          </p>
+        </div>
+
+        {/* Day trip cards */}
+        {dayTrips.length > 0 ? (
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
+            {dayTrips.map((dayTrip) => (
+              <CarteDayTrip key={dayTrip.id} dayTrip={dayTrip} />
+            ))}
+          </div>
+        ) : (
+          <div className="rounded-xl border border-border bg-card px-6 py-12 text-center">
+            <h2 className="text-2xl font-semibold text-heading">
+              No day trips available
+            </h2>
+
+            <p className="mt-2 text-text-secondary">
+              New day trips will be available soon.
+            </p>
+          </div>
+        )}
+      </div>
+    </section>
+  );
+}

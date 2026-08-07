@@ -1,14 +1,8 @@
 import Image from "next/image";
-import {
-  Mail,
-  MapPin,
-  Phone,
-  MessageCircle,
-  Clock,
-  ChevronRight,
-} from "lucide-react";
+import {Mail,MapPin,Phone,MessageCircle,Clock, ChevronRight,} from "lucide-react";
 import Link from "next/link";
 import ReseauxSociaux from "@/components/ui/ReseauxSociaux";
+
 
 const QUICK_LINKS = [
   { href: "/", label: "Home" },

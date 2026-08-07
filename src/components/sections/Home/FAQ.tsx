@@ -36,17 +36,11 @@ function FAQ(): React.JSX.Element {
 
   return (
     <section
-      className="relative overflow-hidden bg-background px-4 py-10 text-foreground sm:px-6 lg:px-8 lg:py-16"
+      className="relative overflow-hidden bg-background px-4 py-4 text-foreground sm:px-6 lg:px-8 lg:py-6"
       aria-labelledby="faq-title"
     >
       <div className="relative z-10 mx-auto max-w-6xl">
         <div className="text-center">
-          <div className="flex items-center justify-center gap-3 text-gold-soft">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] sm:text-sm">
-              Frequently Asked Questions
-            </span>
-          </div>
-
           <h2
             id="faq-title"
             className="mt-3 font-body text-2xl font-extrabold leading-[1.15] tracking-tight text-heading sm:text-3xl lg:text-4xl"

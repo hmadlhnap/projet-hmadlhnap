@@ -1,4 +1,5 @@
 import "server-only";
+import { cache } from "react";
 
 export interface WordPressRendered {
   rendered: string;
@@ -153,6 +154,13 @@ export function getPostSeoTitle(post: WordPressPostPreview): string {
 }
 
 
+function truncate(text: string, max: number): string {
+  if (text.length <= max) return text;
+  const cut = text.slice(0, max);
+  const lastSpace = cut.lastIndexOf(" ");
+  return (lastSpace > 0 ? cut.slice(0, lastSpace) : cut).trim() + "…";
+}
+
 export function getPostSeoDescription(post: WordPressPost): string {
   const seoDescription = post.acf?.seo_description?.trim();
 
@@ -163,10 +171,10 @@ export function getPostSeoDescription(post: WordPressPost): string {
   const excerpt = htmlToText(post.excerpt?.rendered ?? "");
 
   if (excerpt) {
-    return excerpt.slice(0, 180);
+    return truncate(excerpt, 180);
   }
 
-  return htmlToText(post.content?.rendered ?? "").slice(0, 180);
+  return truncate(htmlToText(post.content?.rendered ?? ""), 180);
 }
 
 
@@ -191,6 +199,16 @@ export function getPostDescription(post: WordPressPost): string {
 /* =========================================================
    GET PAGINATED BLOG POSTS
 ========================================================= */
+
+function isValidPost(post: unknown): post is WordPressPostPreview {
+  return (
+    typeof post === "object" &&
+    post !== null &&
+    typeof (post as WordPressPostPreview).id === "number" &&
+    typeof (post as WordPressPostPreview).slug === "string" &&
+    typeof (post as WordPressPostPreview).title?.rendered === "string"
+  );
+}
 
 export async function getBlogPosts(page = 1,perPage = 6,): Promise<PaginatedBlogPosts> {
 
@@ -247,11 +265,12 @@ export async function getBlogPosts(page = 1,perPage = 6,): Promise<PaginatedBlog
 
     const result = await response.json();
 
-    const posts = Array.isArray(result) ? (result as WordPressPostPreview[]) : [];
+    const posts = Array.isArray(result) ? result.filter(isValidPost) : [];
 
     const totalPosts = Number(response.headers.get("X-WP-Total") ?? posts.length,);
 
     const totalPages = Number(response.headers.get("X-WP-TotalPages") ?? 1);
+
 
     return {
       posts,
@@ -272,59 +291,61 @@ export async function getBlogPosts(page = 1,perPage = 6,): Promise<PaginatedBlog
 
 
 
+
 /* =========================================================
    GET BLOG POST BY SLUG
 ========================================================= */
 
-export async function getBlogPostBySlug(slug: string,): Promise<WordPressPost | null> {
+export const getBlogPostBySlug = cache(
+  async (slug: string): Promise<WordPressPost | null> => {
+    const normalizedSlug = slug.trim();
 
-  const normalizedSlug = slug.trim();
+    if (!normalizedSlug) {
+      return null;
+    }
 
-  if (!normalizedSlug) {
-    return null;
-  }
-
-  const url = createBlogUrl({
-    slug: normalizedSlug,
-    status: "publish",
-    per_page: "1",
-    _embed: "author,wp:term",
-  });
-
-  if (!url) {
-    return null;
-  }
-
-  try {
-    const response = await fetch(url, {
-      next: {
-        revalidate: BLOG_REVALIDATE_SECONDS,
-        tags: [BLOG_CACHE_TAG, `wordpress-blog-post-${normalizedSlug}`],
-      },
+    const url = createBlogUrl({
+      slug: normalizedSlug,
+      status: "publish",
+      per_page: "1",
+      _embed: "author,wp:term",
     });
 
-    if (!response.ok) {
+    if (!url) {
+      return null;
+    }
+
+    try {
+      const response = await fetch(url, {
+        next: {
+          revalidate: BLOG_REVALIDATE_SECONDS,
+          tags: [BLOG_CACHE_TAG, `wordpress-blog-post-${normalizedSlug}`],
+        },
+      });
+
+      if (!response.ok) {
+        console.error(
+          `Unable to fetch WordPress post "${normalizedSlug}". Status: ${response.status}`,
+        );
+
+        return null;
+      }
+
+      const result = await response.json();
+
+      const posts = Array.isArray(result) ? (result as WordPressPost[]) : [];
+
+      return posts[0] ?? null;
+    } catch (error) {
       console.error(
-        `Unable to fetch WordPress post "${normalizedSlug}". Status: ${response.status}`,
+        `WordPress post fetching error for "${normalizedSlug}":`,
+        error instanceof Error ? error.message : error,
       );
 
       return null;
     }
-
-    const result = await response.json();
-
-    const posts = Array.isArray(result) ? (result as WordPressPost[]) : [];
-
-    return posts[0] ?? null;
-  } catch (error) {
-    console.error(
-      `WordPress post fetching error for "${normalizedSlug}":`,
-      error instanceof Error ? error.message : error,
-    );
-
-    return null;
-  }
-}
+  },
+);
 
 
 /* =========================================================

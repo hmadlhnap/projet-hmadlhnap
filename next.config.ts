@@ -9,7 +9,7 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "cms.tripstomarrakech.com",
+        hostname: "cms.marrakechpackage.com",
         pathname: "/wp-content/uploads/**",
       },
     ],

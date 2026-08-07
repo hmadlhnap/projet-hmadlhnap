@@ -5,6 +5,7 @@ import GoodToKnow from "@/components/sections/Home/GoodToKnow";
 import HeroSection from "@/components/sections/Home/HeroSection";
 import SharedGroupOffer from "@/components/sections/Home/SharedGroupOffer";
 import Topblogs from "@/components/sections/Home/Topblogs";
+import Topdaytrips from "@/components/sections/Home/Topdaytrips";
 import TravelStyles from "@/components/sections/Home/TravelStyles";
 import WhyChooseUs from "@/components/sections/Home/WhychooseUs";
 import { getBlogPosts } from "@/lib/blogs";
@@ -18,12 +19,13 @@ export default async function Home() {
       <HeroSection />
       <WhyChooseUs />
       <DesertExperienceSelector />
+      <Topdaytrips />
       <SharedGroupOffer />
       <GoodToKnow />
-      <Topblogs posts={topBlogPosts} />
       <TravelStyles />
-      <ContactSection />
+      <Topblogs posts={topBlogPosts} />
       <FAQ />
+      <ContactSection />
     </>
   );
 }

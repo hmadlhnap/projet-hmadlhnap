@@ -56,22 +56,23 @@ const TRAVEL_STYLES: TravelStyle[] = [
 ];
 
 
+
 export default function TravelStyles(): React.JSX.Element {
   return (
     <section
-      className="bg-background px-4 py-4 sm:px-6 sm:py-6 lg:px-8 lg:py-8"aria-labelledby="travel-styles-title">
+      className="bg-background px-4 py-4 sm:px-6 lg:px-8 lg:py-8" aria-labelledby="travel-styles-title">
       <div className="mx-auto max-w-6xl">
 
         {/* Header */}
-        <div className="mx-auto max-w-4xl text-center">
+        <div className="mx-auto max-w-5xl text-center">
           <h2
             id="travel-styles-title"
-            className="mt-4 font-heading text-3xl font-semibold leading-[0.98] tracking-[-0.025em] text-heading sm:text-4xl lg:text-5xl"
+            className="font-heading text-3xl font-semibold leading-[0.98] tracking-[-0.025em] text-heading sm:text-4xl lg:text-5xl"
           >
             Find the Perfect Marrakech Package
             <span className="text-primary"> for Every Travel Style</span>
           </h2>
-          <p className="mx-auto mt-5 max-w-3xl font-body text-sm leading-7 text-text-secondary sm:text-base lg:text-lg lg:leading-8">
+          <p className="mx-auto mt-5 max-w-4xl font-body text-sm leading-7 text-text-secondary sm:text-base lg:text-lg lg:leading-8">
             Every Marrakech Package is carefully designed by local experts to
             help couples, families, friends, and shared groups discover the best
             of Marrakech and Morocco through unforgettable travel experiences.
@@ -86,11 +87,11 @@ export default function TravelStyles(): React.JSX.Element {
             return (
               <article
                 key={style.title}
-                className="group flex min-h-[250px] flex-col items-center justify-center rounded-2xl border border-border bg-card p-4 text-center transition duration-300 hover:border-primary/30"
+                className="group flex min-h-[200px] flex-col items-center justify-center rounded-xl border border-border bg-card p-3 text-center"
               >
-                <div className="flex size-20 items-center justify-center rounded-full bg-primary/5 transition-colors duration-300 group-hover:bg-primary/10">
+                <div className="flex size-14 items-center justify-center rounded-full bg-primary/5 transition-colors duration-300 group-hover:bg-primary/10">
                   <Icon
-                    className="size-10 text-primary"
+                    className="size-8 text-primary"
                     strokeWidth={1.7}
                     aria-hidden="true"
                   />

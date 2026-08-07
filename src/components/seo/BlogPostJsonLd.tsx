@@ -34,8 +34,6 @@ export default function BlogPostJsonLd({post,siteUrl,}: {post: WordPressPost;sit
       logo: {
         "@type": "ImageObject",
         url: `${siteUrl}/images/logofooter.jpeg`,
-        width: 600,
-        height: 60,
       },
     },
   };

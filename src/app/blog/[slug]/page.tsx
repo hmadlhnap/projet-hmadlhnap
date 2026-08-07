@@ -30,7 +30,7 @@ export async function generateMetadata({params,}: {params: Promise<{ slug: strin
   const { slug } = await params;
   const post = await getBlogPostBySlug(slug);
 
- if (!post)
+  if (!post)
    return {
      title: "Article not found",
      robots: { index: false, follow: false },
