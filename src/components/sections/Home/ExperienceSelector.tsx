@@ -6,10 +6,6 @@ import {
   ArrowRight,
   User,
   Users,
-  BadgeCheck,
-  Headphones,
-  CalendarCheck,
-  ShieldCheck,
 } from "lucide-react";
 
 type TourOption = {
@@ -64,34 +60,10 @@ const options: TourOption[] = [
 
 
 
-const trustItems = [
-  {
-    icon: BadgeCheck,
-    title: "Best Price Guarantee",
-    subtitle: "No hidden costs",
-  },
-  {
-    icon: Headphones,
-    title: "24/7 Customer Support",
-    subtitle: "We're here to help",
-  },
-  {
-    icon: CalendarCheck,
-    title: "Flexible Cancellation",
-    subtitle: "Peace of mind",
-  },
-  {
-    icon: ShieldCheck,
-    title: "Secure Booking",
-    subtitle: "Your data is safe with us",
-  },
-];
-
-
 export default function DesertExperienceSelector() {
   return (
-    <section className="bg-background px-4 py-6 md:py-8">
-      <div className="mx-auto max-w-6xl">
+    <section className="bg-background py-6 md:py-8">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="text-3xl font-bold text-heading md:text-4xl lg:text-5xl">
             Choose Your Perfect{" "}
@@ -107,10 +79,7 @@ export default function DesertExperienceSelector() {
         {/* Cards */}
         <div className="relative mt-12 grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-10">
           {options.map((option) => (
-            <div
-              key={option.badge}
-              className="flex flex-col overflow-hidden rounded-2xl border border-border bg-card md:odd:rounded-r-none md:even:rounded-l-none md:even:border-l-0"
-            >
+            <div key={option.badge} className="flex flex-col overflow-hidden rounded-xl border border-border bg-card md:odd:rounded-r-none md:even:rounded-l-none md:even:border-l-0">
               {/* Image */}
               <div className="relative h-56 w-full md:h-64">
                 <Image
@@ -167,19 +136,6 @@ export default function DesertExperienceSelector() {
                   {option.ctaLabel}
                   <ArrowRight className="h-4 w-4" />
                 </a>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Trust bar */}
-        <div className="mt-4 grid grid-cols-1 gap-6 rounded-xl border border-border bg-card p-6 sm:grid-cols-2 lg:grid-cols-4">
-          {trustItems.map(({ icon: Icon, title, subtitle }) => (
-            <div key={title} className="flex items-center gap-3">
-              <Icon className="h-6 w-6 shrink-0 text-primary" />
-              <div>
-                <p className="text-sm font-semibold text-heading">{title}</p>
-                <p className="text-xs text-text-muted">{subtitle}</p>
               </div>
             </div>
           ))}

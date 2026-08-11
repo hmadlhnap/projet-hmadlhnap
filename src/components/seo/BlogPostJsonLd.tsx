@@ -29,7 +29,7 @@ export default function BlogPostJsonLd({post,siteUrl,}: {post: WordPressPost;sit
       url: siteUrl,
     },
     publisher: {
-      "@type": "Organization",
+      "@type": "TravelAgency",
       name: "Marrakech Package",
       logo: {
         "@type": "ImageObject",

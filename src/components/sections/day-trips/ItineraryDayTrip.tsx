@@ -28,7 +28,7 @@ export default function ItineraryDayTrip({itineraryTitle,itinerary,}: ItineraryD
 
             [&_h3]:relative
             [&_h3]:mt-8
-            [&_h3]:text-xl
+            [&_h3]:text-2xl
             [&_h3]:font-bold
             [&_h3]:leading-tight
             [&_h3]:text-heading

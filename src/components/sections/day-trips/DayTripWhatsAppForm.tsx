@@ -1,25 +1,28 @@
 "use client";
 
 import type { FormEvent } from "react";
-import { Mail, MessageCircle } from "lucide-react";
+import { CircleDollarSign, MessageCircle, User } from "lucide-react";
 
+interface DayTripWhatsAppFormProps {
+  dayTripTitle: string;
+  price: number | string | null;
+  priceLabel?: string;
+}
 
-interface DayTripWhatsAppFormProps {dayTripTitle: string;}
-
-export default function DayTripWhatsAppForm({ dayTripTitle,}: DayTripWhatsAppFormProps) {
-
+export default function DayTripWhatsAppForm({dayTripTitle,price,priceLabel,}: DayTripWhatsAppFormProps) {
 
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
     const formData = new FormData(event.currentTarget);
 
-    const email = String(formData.get("email") || "").trim();
+    const name = String(formData.get("name") || "").trim();
+
     const message = String(formData.get("message") || "").trim();
 
     const whatsappNumber = "212642618936";
 
-    const whatsappMessage = `Hello Marrakech Package, I am interested in: ${dayTripTitle} Email:${email} Message: ${message}`.trim();
+    const whatsappMessage = `Hello Marrakech Package, I am interested in: ${dayTripTitle} Name: ${name} Message: ${message}`.trim();
 
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
       whatsappMessage,
@@ -30,55 +33,51 @@ export default function DayTripWhatsAppForm({ dayTripTitle,}: DayTripWhatsAppFor
 
 
   return (
-    <div className="overflow-hidden rounded-[6px] border border-border bg-card">
+    <div className="overflow-hidden rounded-[8px] border border-border bg-card">
       {/* Header */}
-      <div className="bg-primary p-4">
+      <div className="bg-primary p-3">
         <div className="flex size-11 items-center justify-center rounded-full bg-primary-foreground text-primary">
-          <MessageCircle aria-hidden="true" className="size-6" />
+          <MessageCircle aria-hidden="true" className="size-5" />
         </div>
 
         <h2 className="mt-4 text-3xl font-bold leading-tight text-primary-foreground">
           Ask About This Day Trip
         </h2>
 
-        <p className="mt-2 text-sm leading-6 text-primary-foreground">
+        <p className="mt-2 text-sm leading-6 text-primary-foreground/90">
           Send us your question directly through WhatsApp.
         </p>
       </div>
 
       {/* Form */}
-      <form onSubmit={handleSubmit} className="space-y-5 p-5">
-        {/* Email */}
+      <form onSubmit={handleSubmit} className="space-y-5 p-4">
+        {/* Name */}
         <div>
           <label
-            htmlFor="day-trip-email"
+            htmlFor="day-trip-name"
             className="mb-2 block text-sm font-semibold text-heading"
           >
-            Email address
+            Your name
           </label>
 
           <div className="relative">
-            <Mail
+            <User
               aria-hidden="true"
               className="pointer-events-none absolute left-4 top-1/2 size-4 -translate-y-1/2 text-text-muted"
             />
 
             <input
-              id="day-trip-email"
-              name="email"
-              type="email"
+              id="day-trip-name"
+              name="name"
+              type="text"
               required
-              autoComplete="email"
-              placeholder="you@example.com"
+              autoComplete="name"
+              placeholder="Your full name"
               className="
                 h-12 w-full rounded-lg border border-border
                 bg-background pl-11 pr-4
                 text-sm text-text-main
-                outline-none transition
-                placeholder:text-text-muted
-                focus:border-primary
-                focus:ring-2 focus:ring-primary/15
-              "
+                outline-none transition"
             />
           </div>
         </div>
@@ -89,7 +88,7 @@ export default function DayTripWhatsAppForm({ dayTripTitle,}: DayTripWhatsAppFor
             htmlFor="day-trip-message"
             className="mb-2 block text-sm font-semibold text-heading"
           >
-            Message
+            Your message
           </label>
 
           <textarea
@@ -100,28 +99,20 @@ export default function DayTripWhatsAppForm({ dayTripTitle,}: DayTripWhatsAppFor
             placeholder="Tell us your preferred date, number of travelers or any special request..."
             className="
               w-full resize-none rounded-lg border border-border
-              bg-background px-4 py-3
+              bg-background p-3
               text-sm leading-6 text-text-main
               outline-none transition
-              placeholder:text-text-muted
-              focus:border-primary
-              focus:ring-2 focus:ring-primary/15
-            "
+              placeholder:text-text-muted            "
           />
         </div>
 
         {/* WhatsApp button */}
         <button
           type="submit"
-          className="
-            flex h-12 w-full items-center justify-center gap-2
-            rounded-lg bg-whatsapp px-5
+          className="flex h-12 w-full items-center justify-center gap-2 rounded-lg bg-whatsapp px-5
             font-semibold text-footer
             transition
-            hover:opacity-90
-            focus:outline-none
-            focus:ring-2 focus:ring-whatsapp/30
-          "
+            hover:opacity-90"
         >
           <MessageCircle aria-hidden="true" className="size-5" />
           Send via WhatsApp
@@ -131,6 +122,34 @@ export default function DayTripWhatsAppForm({ dayTripTitle,}: DayTripWhatsAppFor
           WhatsApp will open with your message ready to send.
         </p>
       </form>
+
+      {price !== null && price !== undefined && price !== "" && (
+        <div className="border-t border-border">
+          <div className="flex items-center justify-between gap-4 rounded-xl bg-surface-soft p-4">
+            <div className="flex items-center gap-3">
+              <div className="flex size-10 shrink-0 items-center justify-center rounded-full bg-gold-muted text-primary">
+                <CircleDollarSign aria-hidden="true" className="size-5" />
+              </div>
+
+              <div>
+                <p className="text-xs font-medium uppercase tracking-wider text-text-muted">
+                  Tour price
+                </p>
+
+                {priceLabel && (
+                  <p className="mt-1 text-sm text-text-secondary">
+                    {priceLabel}
+                  </p>
+                )}
+              </div>
+            </div>
+
+            <div className="text-right">
+              <p className="text-2xl font-bold text-heading">€{price}</p>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

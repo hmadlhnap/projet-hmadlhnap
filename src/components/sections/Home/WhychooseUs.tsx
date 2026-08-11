@@ -56,13 +56,9 @@ function DecorativeDivider(): React.JSX.Element {
 
 export default function WhyChooseUs(): React.JSX.Element {
   return (
-    <section
-      className="bg-background px-4 py-6 sm:px-6 lg:px-8 lg:pb-8"
-      aria-labelledby="why-choose-us-title"
-    >
-      <div className="mx-auto max-w-6xl">
-        
+    <section className="bg-background pb-6" aria-labelledby="why-choose-us-title" >
 
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-4xl text-center">
           <h2
             id="why-choose-us-title"
@@ -78,18 +74,18 @@ export default function WhyChooseUs(): React.JSX.Element {
         </div>
 
         {/* CARDS */}
-        <div className="mt-6 grid grid-cols-1 gap-5 sm:mt-12 sm:grid-cols-2 lg:gap-6 xl:grid-cols-4">
+        <div className="mt-4 grid grid-cols-1 gap-5 sm:mt-8 sm:grid-cols-2 lg:gap-6 xl:grid-cols-4">
           {ADVANTAGES.map((advantage) => {
             const Icon = advantage.icon;
 
             return (
               <article
                 key={advantage.title}
-                className="group flex h-full flex-col items-center rounded-2xl border border-border bg-card px-6 py-6 text-center transition duration-300 hover:-translate-y-1 hover:border-primary/30"
+                className="group flex h-full flex-col items-center rounded-xl border border-border bg-card p-4 text-center transition duration-300 hover:-translate-y-1 hover:border-primary/30"
               >
-                <div className="flex size-16 items-center justify-center rounded-full bg-primary/7 transition duration-300 group-hover:bg-primary/12">
+                <div className="flex size-14 items-center justify-center rounded-full bg-primary/7 transition duration-300 group-hover:bg-primary/12">
                   <Icon
-                    className="size-10 text-primary"
+                    className="size-8 text-primary"
                     strokeWidth={1.6}
                     aria-hidden="true"
                   />
@@ -99,7 +95,7 @@ export default function WhyChooseUs(): React.JSX.Element {
                   {advantage.title}
                 </h3>
 
-                <div className="mt-5">
+                <div className="mt-2">
                   <DecorativeDivider />
                 </div>
 

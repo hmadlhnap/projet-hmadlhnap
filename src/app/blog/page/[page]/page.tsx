@@ -7,6 +7,7 @@ interface PaginatedBlogPageProps {
   params: Promise<{ page: string }>;
 }
 
+
 function parsePage(value: string): number | null {
   if (!/^\d+$/.test(value)) {
     return null;
@@ -28,13 +29,13 @@ export async function generateMetadata({ params,}: PaginatedBlogPageProps): Prom
     title: `Morocco Travel Blog – Page ${currentPage}`,
     description: `Browse page ${currentPage} of the Marrakech Package blog for Morocco destination guides, travel tips and inspiring stories.`,
     alternates: {
-      canonical: `/blog/${currentPage}`,
+      canonical: `/blog/page/${currentPage}`,
     },
     openGraph: {
       title: `Morocco Travel Blog – Page ${currentPage} | Marrakech Package`,
       description:
         "Browse Morocco destination guides, Marrakech travel tips and practical resources.",
-      url: `/blog/${currentPage}`,
+      url: `/blog/page/${currentPage}`,
       type: "website",
     },
   };

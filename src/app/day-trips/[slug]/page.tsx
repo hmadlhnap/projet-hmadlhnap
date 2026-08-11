@@ -11,6 +11,7 @@ import DayTripWhatsAppForm from '@/components/sections/day-trips/DayTripWhatsApp
 import ContactSection from '@/components/sections/Home/ContactSection';
 import DayTripJsonLd from '@/components/seo/DayTripJsonLd';
 import { getDayTripSlugs } from '@/lib/daytrips';
+import { notFound } from "next/navigation";
 
 
 const SITE_URL = "https://marrakechpackage.com";
@@ -74,32 +75,26 @@ const SITE_NAME = "Marrakech Package";
 
    const heroImage = acf.hero_image && typeof acf.hero_image === "object" ? acf.hero_image : null;
 
-   const imageUrl =  heroImage?.url || `${SITE_URL}/images/day-trip-placeholder.webp`;
+   const imageUrl =  heroImage?.url || `${SITE_URL}/images/hero.jpeg`;
 
    const imageAlt = heroImage?.alt?.trim() || `${pageTitle} from Marrakech`;
 
    const keywords = parseKeywords(acf.keywords);
   
    return {
-
      title: {
        absolute: seoTitle,
      },
-
      description: seoDescription,
-
      ...(keywords.length > 0 && {keywords,}),
-
 
      applicationName: SITE_NAME,
      creator: SITE_NAME,
      publisher: SITE_NAME,
      category: "Travel",
-
      alternates: {
        canonical: canonicalUrl,
      },
-
      robots: {
        index: true,
        follow: true,
@@ -143,70 +138,72 @@ const SITE_NAME = "Marrakech Package";
 
 
 
-async function page({params}: DayTripDetailsPageProps) {
+async function page({
+  params,
+}: DayTripDetailsPageProps): Promise<React.JSX.Element> {
+  const { slug } = await params;
+  const detailstrip = await getDetailsDayTrip(slug);
 
-    const {slug} = await params;
-    const detailstrip = await getDetailsDayTrip(slug);
+  if (!detailstrip) {
+    notFound();
+  }
 
-    if(!detailstrip){
-        return <div>Day trip not found</div>
-    }
+  const { acf } = detailstrip;
 
-    const {acf} = detailstrip;
+  return (
+    <>
+      <DayTripJsonLd dayTrip={detailstrip} />
+      <HeroDayTrip
+        title={detailstrip.title.rendered}
+        heroImage={typeof acf.hero_image === "object" ? acf.hero_image : null}
+        heroDescription={acf.hero_description}
+        duration={acf.duration}
+        departureCity={acf.departure_city}
+        transport={acf.transport}
+        dayTripType={acf.day_trip_type}
+      />
+      <HighlightsDayTrip
+        title={detailstrip.title.rendered}
+        highlights={acf.highlights}
+      />
+      <section className="bg-background">
+        <div className="mx-auto grid max-w-7xl gap-4 lg:grid-cols-[minmax(0,1fr)_360px]">
+          <div className="min-w-0">
+            <OverviewDayTrip
+              overviewTitle={acf.overview_title}
+              overviewContent={acf.overview_content}
+              whyChoose={acf.why_choose}
+            />
 
-    return (
-      <>
-        <DayTripJsonLd dayTrip={detailstrip} />
+            <ItineraryDayTrip
+              itineraryTitle={acf.itinerary_title}
+              itinerary={acf.itinerary}
+            />
 
-        <HeroDayTrip
-          title={detailstrip.title.rendered}
-          heroImage={typeof acf.hero_image === "object" ? acf.hero_image : null}
-          heroDescription={acf.hero_description}
-          duration={acf.duration}
-          departureCity={acf.departure_city}
-          transport={acf.transport}
-          dayTripType={acf.day_trip_type}
-        />
-
-        <HighlightsDayTrip
-          title={detailstrip.title.rendered}
-          highlights={acf.highlights}
-        />
-
-        <section className="bg-background">
-          <div className="mx-auto grid max-w-7xl gap-4 lg:grid-cols-[minmax(0,1fr)_360px]">
-            <div className="min-w-0">
-              <OverviewDayTrip
-                overviewTitle={acf.overview_title}
-                overviewContent={acf.overview_content}
-                whyChoose={acf.why_choose}
-              />
-
-              <ItineraryDayTrip
-                itineraryTitle={acf.itinerary_title}
-                itinerary={acf.itinerary}
-              />
-
-              <IncludedExcludedDayTrip
-                included={acf.included}
-                excluded={acf.excluded}
-              />
-            </div>
-
-            <aside className="h-fit px-4 sm:px-0 lg:sticky lg:top-24">
-              <DayTripWhatsAppForm dayTripTitle={detailstrip.title.rendered} />
-            </aside>
+            <IncludedExcludedDayTrip
+              included={acf.included}
+              excluded={acf.excluded}
+            />
           </div>
-        </section>
 
-        <ContentInformationDayTrip
-          contentSections={acf.content_sections}
-          importantInformation={acf.important_information}
-        />
-        <FaqDayTrip faq={acf.faq} />
-        <ContactSection />
-      </>
-    );
+          <aside className="h-fit px-4 sm:px-0 lg:sticky lg:top-24">
+            <DayTripWhatsAppForm
+              dayTripTitle={detailstrip.title.rendered}
+              price={acf.shared_tour_price}
+              priceLabel="/person"
+            />
+          </aside>
+        </div>
+      </section>
+
+      <ContentInformationDayTrip
+        contentSections={acf.content_sections}
+        importantInformation={acf.important_information}
+      />
+      <FaqDayTrip faq={acf.faq} />
+      <ContactSection />
+    </>
+  );
 }
  
 export default page

@@ -25,10 +25,8 @@ const icons = [
   UsersRound,
 ];
 
-export default function HighlightsDayTrip({
-  title,
-  highlights,
-}: HighlightsDayTripProps) {
+export default function HighlightsDayTrip({ title, highlights,}: HighlightsDayTripProps) {
+  
   const highlightItems = linesToArray(highlights);
 
   if (highlightItems.length === 0) {

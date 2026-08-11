@@ -16,17 +16,17 @@ type SocialItem = {
 const socials: SocialItem[] = [
   {
     name: "Instagram",
-    link: "https://www.instagram.com/tripstomarrakech?igsh=MXE2b3d1YWFlZGhjcA%3D%3D&utm_source=qr",
+    link: "https://www.instagram.com/marrakech_package?igsh=MXNqeXM3YWttMnUzag%3D%3D&utm_source=qr",
     icon: <FaInstagram aria-hidden="true" />,
   },
   {
     name: "TripAdvisor",
-    link: "https://www.tripadvisor.com/",
+    link: "https://www.tripadvisor.co.uk/Attraction_Review-g293734-d34329503-Reviews-Itinerary_Morocco_Tours-Marrakech_Marrakech_Safi.html",
     icon: <FaTripadvisor aria-hidden="true" />,
   },
   {
     name: "WhatsApp",
-    link: "https://wa.me/212642618936?text=Hello%20Trips%20to%20Marrakech%2C%20I%20would%20like%20more%20information.",
+    link: "https://wa.me/212642618936?text=Hello%20marrakech%20package%2C%20I%20would%20like%20more%20information.",
     icon: <FaWhatsapp aria-hidden="true" />,
   },
 ];

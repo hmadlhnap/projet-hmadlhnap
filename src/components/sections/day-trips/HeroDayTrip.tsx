@@ -86,7 +86,7 @@ export default function HeroDayTrip({title, heroImage, heroDescription, duration
         <div className="absolute inset-0 bg-gradient-to-r from-footer via-footer/65 to-footer/5" />
 
         {/* Hero content */}
-        <div className="relative z-10 mx-auto flex min-h-[300px] max-w-[1440px] items-center px-4 pb-24 pt-20 sm:min-h-[360px] sm:px-6 lg:min-h-[400px] lg:px-8">
+        <div className="relative z-10 mx-auto flex max-w-7xl min-h-[300px] items-center pb-24 pt-20 sm:min-h-[360px] lg:min-h-[400px]">
           <div className="max-w-2xl">
             <h1 id="day-trip-title" className="max-w-xl text-3xl font-bold leading-[1.05] text-footer-foreground sm:text-4xl lg:text-5xl">
               {cleanTitle}

@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   keywords: [
     "about Marrakech Package",
     "Morocco travel agency",
-    "local Morocco tour guide",
+    "local tour guides morocco",
     "Marrakech tour company",
     "authentic Morocco experiences",
   ],

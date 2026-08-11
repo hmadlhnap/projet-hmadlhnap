@@ -1,12 +1,7 @@
 import {
-  Heart,
-  Palmtree,
-  ShieldCheck,
-  UserRound,
-  Users,
-  UsersRound,
   type LucideIcon,
 } from "lucide-react";
+
 
 
 type TravelStyle = {
@@ -16,53 +11,14 @@ type TravelStyle = {
 };
 
 
-const TRAVEL_STYLES: TravelStyle[] = [
-  {
-    title: "Couples",
-    description:
-      "Romantic getaways and unforgettable moments in the heart of Marrakech.",
-    icon: Heart,
-  },
-  {
-    title: "Families",
-    description:
-      "Family-friendly tours and activities for all ages to enjoy together.",
-    icon: UsersRound,
-  },
-  {
-    title: "Friends",
-    description:
-      "Share amazing adventures and create memories that last a lifetime.",
-    icon: UserRound,
-  },
-  {
-    title: "Shared Group Tours",
-    description:
-      "Join other travelers and explore Morocco with fun, comfort, and great company.",
-    icon: Users,
-  },
-  {
-    title: "Desert Adventures",
-    description:
-      "From camel treks to luxury camps, experience the magic of the Moroccan Sahara.",
-    icon: Palmtree,
-  },
-  {
-    title: "Private Tours",
-    description:
-      "Enjoy a fully personalized experience with your own private driver and vehicle.",
-    icon: ShieldCheck,
-  },
-];
 
 
 
-export default function TravelStyles(): React.JSX.Element {
+export default function TravelStyles({TRAVEL_STYLES}: {TRAVEL_STYLES: TravelStyle[]}): React.JSX.Element {
   return (
-    <section
-      className="bg-background px-4 py-4 sm:px-6 lg:px-8 lg:py-8" aria-labelledby="travel-styles-title">
-      <div className="mx-auto max-w-6xl">
+    <section className="bg-background" aria-labelledby="travel-styles-title">
 
+      <div className="mx-auto max-w-7xl px-4 py-4 sm:px-6 lg:px-8 lg:py-8">
         {/* Header */}
         <div className="mx-auto max-w-5xl text-center">
           <h2

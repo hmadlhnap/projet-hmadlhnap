@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { Calendar, MapPin, Search, User } from "lucide-react";
 
-const WHATSAPP_NUMBER = "212612345678"; // chiffres uniquement, sans "+" ni espaces
+const WHATSAPP_NUMBER = "212642618936"; // chiffres uniquement, sans "+" ni espaces
 
 const DESTINATIONS = [
   "Where to?",
@@ -31,11 +31,12 @@ export default function SearchBar(): React.JSX.Element {
 
   const handleSearch = (): void => {
     const message =
-      `Hello! I'm interested in a Morocco tour.\n\n` +
-      `📍 Destination: ${destination}\n` +
-      `📅 Duration: ${duration}\n` +
-      `👥 Guests: ${guests}\n\n` +
-      `Could you help me plan this trip?`;
+      `Hello Marrakech Package team,\n\n` +
+      `I would like to request more information about a Morocco tour with the following details:\n\n` +
+      `• Destination: ${destination}\n` +
+      `• Duration: ${duration}\n` +
+      `• Number of guests: ${guests}\n\n` +
+      `Could you please share availability and pricing? Thank you.`;
 
     const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
     window.open(url, "_blank");
