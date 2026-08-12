@@ -78,7 +78,7 @@ export default function SharedGroupOffer(): React.JSX.Element {
             </p>
 
             <p className="mt-1 font-body text-3xl font-extrabold text-primary">
-              6+ People
+              17+ People
             </p>
 
             <p className="mt-4 max-w-[260px] text-sm leading-6 text-text-secondary">

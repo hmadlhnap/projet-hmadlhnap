@@ -169,17 +169,18 @@ function Logo({ onClick }: { onClick?: () => void }): React.JSX.Element {
     <Link
       href="/"
       onClick={onClick}
-      className="flex shrink-0 items-center rounded-lg focus-visible:outline-none"
+      className="group flex shrink-0 items-center focus-visible:outline-none"
       aria-label="Marrakech Package home"
     >
       <Image
         src="/logo.png"
         alt="Marrakech Package logo"
-        width={144}
-        height={38}
-        quality={85}
-        sizes="(max-width: 1023px) 96px, 144px"
-        className="h-auto w-24 lg:w-36"
+        width={140}
+        height={90}
+        quality={95}
+        priority
+        sizes="(max-width: 1023px) 84px, 112px"
+        className="h-auto w-20 sm:w-24 lg:w-28"
       />
     </Link>
   );

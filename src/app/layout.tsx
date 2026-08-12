@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Manrope } from "next/font/google";
 import "./globals.css";
+import { Toaster } from "sonner";
 
 import Footer from "@/components/Layout/Footer";
 import Header from "@/components/Layout/Header";
@@ -103,10 +104,9 @@ export default function RootLayout({
     >
       <body className="flex min-h-full flex-col">
         <Header />
-
         <main className="w-full flex-1 bg-background">{children}</main>
-
         <Footer />
+        <Toaster position="top-right" richColors />
       </body>
     </html>
   );

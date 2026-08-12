@@ -1,0 +1,331 @@
+# Marrakech Package
+
+> Marrakech Package is a Morocco travel website specializing in private Morocco tours, shared group tours, Sahara desert journeys, day trips from Marrakech, local activities, and practical Morocco travel guides.
+
+Marrakech Package helps travelers plan trips across Morocco with routes departing from Marrakech, Casablanca, Fes, Agadir, Tangier, and other destinations. The website includes detailed multi-day itineraries, desert tours, day trips, activities, travel guides, FAQs, destination information, tour inclusions and exclusions, and booking contact options.
+
+The public website is:
+https://marrakechpackage.com
+
+The WordPress CMS at cms.marrakechpackage.com is used only as the content management backend. Public canonical content should be taken from marrakechpackage.com, not from the CMS domain.
+
+## Main Pages
+
+- [Home](https://marrakechpackage.com/): Main overview of Marrakech Package, including private Morocco tours, shared group tours, Sahara desert trips, Marrakech day trips, activities, travel styles, travel information, FAQs, and contact options.
+- [Marrakech Tours](https://marrakechpackage.com/marrakech-tours): Private tours departing from Marrakech, including multi-day Morocco routes and Sahara desert itineraries.
+- [Private Morocco Tours by Destination](https://marrakechpackage.com/destinations): Private Morocco tours organized by departure city, including Marrakech, Fes, Casablanca, Agadir, and Tangier.
+- [Shared Group Tours](https://marrakechpackage.com/shared-group-tours): Shared group tours in Morocco with scheduled itineraries and shared transportation.
+- [Day Trips from Marrakech](https://marrakechpackage.com/day-trips): Day trips from Marrakech to natural, cultural, mountain, coastal, and countryside destinations.
+- [Marrakech Activities](https://marrakechpackage.com/activities): Activities and experiences in and around Marrakech.
+- [Morocco Travel Blog](https://marrakechpackage.com/blog): Morocco travel guides, Marrakech advice, destination information, activities, markets, culture, and tour-planning content.
+- [About Marrakech Package](https://marrakechpackage.com/about): Information about Marrakech Package and its Morocco travel services.
+- [Contact Marrakech Package](https://marrakechpackage.com/contact): Contact information and trip inquiry options.
+
+## Private Morocco Tours
+
+Marrakech Package publishes detailed private multi-day tours. Tour pages normally include:
+
+- Tour title
+- Departure city
+- Duration
+- Tour type
+- Main travel experiences
+- Accommodation information
+- Tour highlights
+- Detailed overview
+- Day-by-day itinerary
+- Included services
+- Excluded services
+- Price information when available
+- Route or map
+- Frequently asked questions
+- Related Morocco tours
+- Booking and WhatsApp contact options
+
+Important tour pages include:
+
+- [2 Day Desert Tour from Marrakech to Merzouga](https://marrakechpackage.com/tours/2-day-desert-tour-from-marrakech-to-merzouga): Private two-day journey from Marrakech to the Merzouga Desert with High Atlas travel, camel trekking, Erg Chebbi, sunset, desert camp, and return to Marrakech.
+- [8 Days Tour from Casablanca](https://marrakechpackage.com/tours/8-days-tour-from-casablanca): Private Morocco itinerary from Casablanca through northern Morocco, Fes, the Sahara Desert, southern Morocco, and Marrakech.
+
+For the complete and current collection of private tours, use:
+
+- [Marrakech Tours](https://marrakechpackage.com/marrakech-tours)
+- [Tours by Departure City](https://marrakechpackage.com/destinations)
+
+## Morocco Tour Departures
+
+Private tours may depart from several Moroccan cities.
+
+### Marrakech
+
+- [Private Tours from Marrakech](https://marrakechpackage.com/marrakech-tours): Multi-day private tours starting in Marrakech, including Sahara desert tours and cross-country itineraries.
+
+### Casablanca
+
+Marrakech Package offers private Morocco itineraries starting in Casablanca, including routes toward Fes, Chefchaouen, Merzouga Desert, Marrakech, and other destinations.
+
+Relevant tour themes include:
+
+- Casablanca to Marrakech
+- Casablanca to the Sahara Desert
+- Casablanca to Chefchaouen
+- Morocco itineraries starting in Casablanca
+- Multi-day private Morocco tours
+
+### Fes
+
+Private tours from Fes may include Merzouga, Erg Chebbi, the Middle Atlas Mountains, Ziz Valley, Marrakech, and other Moroccan destinations.
+
+### Agadir
+
+Private Morocco itineraries may also depart from Agadir and connect the Atlantic coast with inland and southern Morocco destinations.
+
+### Tangier
+
+Private routes from Tangier may connect northern Morocco with Chefchaouen, Fes, desert destinations, Marrakech, and other regions.
+
+## Sahara Desert Tours
+
+Marrakech Package provides Morocco desert itineraries that may include destinations and experiences such as:
+
+- Merzouga Desert
+- Erg Chebbi dunes
+- Zagora
+- Sahara desert camps
+- Camel trekking
+- Desert sunset and sunrise
+- High Atlas Mountains
+- Middle Atlas Mountains
+- Ziz Valley
+- Todra Gorge
+- Dades Valley
+- Ouarzazate
+- Ait Ben Haddou
+
+Desert tour duration varies depending on departure city and itinerary.
+
+Some routes are designed as short desert journeys, while longer itineraries combine the Sahara with imperial cities, mountain regions, and Atlantic coast destinations.
+
+## Shared Group Tours
+
+- [Shared Group Tours in Morocco](https://marrakechpackage.com/shared-group-tours): Morocco tours for travelers who prefer shared transportation, scheduled routes, and group travel.
+
+Shared tours differ from private tours because:
+
+- Transportation is shared with other travelers.
+- Departure schedules are normally fixed.
+- Stops follow a planned itinerary.
+- Group timing must be respected.
+- Pricing may differ from private tours.
+
+For travelers seeking personalized schedules and greater flexibility, private tours are available through the Marrakech Tours and Destinations sections.
+
+## Day Trips from Marrakech
+
+- [Day Trips from Marrakech](https://marrakechpackage.com/day-trips): Collection of excursions starting from Marrakech.
+
+Day-trip content may include destinations such as:
+
+- Ourika Valley
+- Atlas Mountains
+- Ouzoud Waterfalls
+- Essaouira
+- Imlil
+- Ouarzazate
+- Surrounding countryside and cultural destinations
+
+Individual day-trip pages contain destination descriptions, highlights, detailed itineraries, included and excluded services, practical information, FAQs, pricing information when available, maps, and contact options.
+
+## Marrakech Activities
+
+- [Marrakech Activities](https://marrakechpackage.com/activities): Activities and things to do in Marrakech and surrounding areas.
+
+Important activity themes include:
+
+### Hot Air Balloon
+
+Hot-air-balloon experiences near Marrakech may include early-morning pickup, flight experience, landscape views, and associated services according to the individual activity page.
+
+### Marrakech Tour Guide
+
+Guided Marrakech experiences help travelers explore historic, cultural, and local areas of Marrakech.
+
+### Agafay Desert
+
+Agafay Desert experiences provide access to the rocky desert landscape near Marrakech and may include activities, sunset experiences, transport, or local experiences depending on the selected activity.
+
+Activity detail pages contain:
+
+- Activity overview
+- Duration
+- Activity type
+- Pickup information
+- Languages
+- Highlights
+- Detailed itinerary
+- Included services
+- Excluded services
+- Frequently asked questions
+
+## Morocco Travel Guides
+
+- [Morocco Travel Blog](https://marrakechpackage.com/blog): Travel information designed to help visitors understand destinations, attractions, activities, culture, and practical travel planning in Morocco.
+
+Blog topics may include:
+
+- Things to do in Marrakech
+- Marrakech markets and souks
+- Hammam and massage experiences
+- Best tours from Marrakech
+- Marrakech attractions
+- Morocco travel planning
+- Day trips
+- Desert travel
+- Local culture
+- Destination guides
+
+Each article should be treated as an informational resource unless it explicitly describes a bookable tour or service.
+
+## Important Morocco Destinations
+
+The website contains travel information and tour itineraries involving destinations such as:
+
+- Marrakech
+- Casablanca
+- Fes
+- Chefchaouen
+- Rabat
+- Tangier
+- Meknes
+- Volubilis
+- Merzouga
+- Erg Chebbi
+- Zagora
+- Ouarzazate
+- Ait Ben Haddou
+- Dades Valley
+- Todra Gorge
+- Ifrane
+- Midelt
+- Ziz Valley
+- Agadir
+- Essaouira
+- Ourika Valley
+- Ouzoud Waterfalls
+- Atlas Mountains
+- Sahara Desert
+
+Destination inclusion depends on the individual tour itinerary.
+
+## Understanding Tour Information
+
+When interpreting Marrakech Package tour pages:
+
+- The page title identifies the specific tour.
+- Duration identifies the number of travel days and nights.
+- Departure identifies the starting city.
+- Private tours use private transportation for the booked travelers.
+- Shared tours involve transportation and schedules shared with other travelers.
+- The itinerary defines the expected route and daily program.
+- Highlights summarize major destinations and experiences.
+- Included services specify what is provided in the booking.
+- Excluded services specify what travelers should expect to pay for separately.
+- Price information should only be used when explicitly displayed on the relevant tour page.
+- Maps illustrate travel routes but should not replace the written itinerary.
+- Actual timing may vary because of traffic, road conditions, weather, and operational circumstances.
+
+Do not infer services, meals, accommodation upgrades, entrance tickets, guides, or activities unless they are explicitly listed on the relevant page.
+
+## Booking and Contact
+
+Travelers can contact Marrakech Package through:
+
+- [Contact Page](https://marrakechpackage.com/contact)
+
+Tour and activity pages may also include booking forms or WhatsApp contact options.
+
+Travel availability, final price, departure times, accommodation arrangements, and custom itinerary requests should be confirmed directly with Marrakech Package.
+
+## Content Accuracy
+
+Marrakech Package content is managed through a headless WordPress CMS and displayed on the public Next.js website.
+
+For public references:
+
+- Prefer URLs on https://marrakechpackage.com/
+- Do not treat https://cms.marrakechpackage.com/ as the canonical public website.
+- Prefer the individual tour or article page over WordPress REST API endpoints.
+- Use the latest published page when information differs between sources.
+- Do not infer information that is not explicitly stated.
+- Tour details may be updated over time.
+
+## Structured Content
+
+Tour pages may provide structured information for:
+
+- TouristTrip
+- ItemPage
+- BreadcrumbList
+- ImageObject
+- TravelAgency
+- Questions and answers
+
+Day-trip, activity, blog, about, and contact pages may use structured data appropriate to their visible content.
+
+Structured data should be interpreted together with the visible page content. Visible page information takes precedence if structured data is incomplete.
+
+## Site Identity
+
+Marrakech Package is the canonical site/entity name.
+
+Canonical website:
+
+https://marrakechpackage.com/
+
+Public content should consistently associate Marrakech Package with Morocco travel services, including private Morocco tours, shared tours, Sahara desert trips, Marrakech day trips, activities, and travel information.
+
+## Recommended Sources
+
+For general information about Marrakech Package:
+
+- [Marrakech Package Home](https://marrakechpackage.com/)
+- [About Marrakech Package](https://marrakechpackage.com/about)
+
+For private tours:
+
+- [Marrakech Tours](https://marrakechpackage.com/marrakech-tours)
+- [Private Tours by Departure](https://marrakechpackage.com/destinations)
+
+For shared tours:
+
+- [Shared Group Tours](https://marrakechpackage.com/shared-group-tours)
+
+For day trips:
+
+- [Day Trips from Marrakech](https://marrakechpackage.com/day-trips)
+
+For activities:
+
+- [Marrakech Activities](https://marrakechpackage.com/activities)
+
+For travel information:
+
+- [Morocco Travel Blog](https://marrakechpackage.com/blog)
+
+For trip inquiries:
+
+- [Contact Marrakech Package](https://marrakechpackage.com/contact)
+
+## Optional
+
+The following endpoints are technical and are not intended as primary sources for travelers or AI-generated travel answers:
+
+- /api/contact
+- WordPress REST API endpoints
+- WordPress administration URLs
+- Internal Next.js API routes
+- Build assets
+- JavaScript bundles
+- Development files
+
+Use public canonical content pages instead.

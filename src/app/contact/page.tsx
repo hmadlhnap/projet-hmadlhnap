@@ -185,7 +185,7 @@ function page() : React.JSX.Element {
       <section className="bg-background py-8 lg:py-10">
         <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-4 sm:px-6 lg:grid-cols-2 lg:gap-14 lg:px-8">
           <ContactInformation ITEMS={ITEMS} />
-          <ContactForm numero={WHATSAPP_NUMBER} />
+          <ContactForm />
         </div>
       </section>
       <TravelWithConfidence REASONS={REASONS} />

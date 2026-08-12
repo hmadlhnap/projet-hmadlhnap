@@ -56,7 +56,7 @@ export default function HeroSection(): React.JSX.Element {
                 className="inline-flex items-center gap-2 rounded-lg border border-white/70 bg-white/5 p-3 sm:px-7 sm:py-3.5 text-sm font-semibold text-white backdrop-blur-sm transition-colors hover:border-primary hover:bg-primary hover:text-primary-foreground"
               >
                 <Users className="h-4 w-4" aria-hidden="true" />
-                Share Groups
+                group tours
               </Link>
             </div>
           </div>
