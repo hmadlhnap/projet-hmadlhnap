@@ -15,6 +15,23 @@ const nextConfig: NextConfig = {
     ],
     formats: ["image/avif", "image/webp"],
   },
+
+  async redirects() {
+    return [
+      {
+        source: "/:path*",
+        has: [
+          {
+            type: "host",
+            value: "www.marrakechpackage.com",
+          },
+        ],
+        destination: "https://marrakechpackage.com/:path*",
+        permanent: true,
+      },
+    ];
+  },
+  
 };
 
 export default nextConfig;

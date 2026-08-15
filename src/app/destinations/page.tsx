@@ -107,10 +107,6 @@ export default async function ToursPage() {
         {groups.map((group) => (
           <div key={group.departure.id} className="mb-16">
             <div className="mx-auto mb-8 max-w-3xl text-center">
-              <p className="text-xs font-bold uppercase tracking-[0.2em] text-primary">
-                Private Morocco Tours
-              </p>
-
               <h2 className="mt-2 text-3xl font-bold leading-tight text-heading sm:text-4xl">
                 Private Tours from{" "}
                 <span className="text-primary">{group.departure.name}</span>

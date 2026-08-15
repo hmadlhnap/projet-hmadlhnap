@@ -35,8 +35,8 @@ const options: TourOption[] = [
       "Flexible itinerary",
       "Personalized experience",
     ],
-    ctaLabel: "Book Private Tour",
-    ctaHref: "/tours/private",
+    ctaLabel: "View Private Tour",
+    ctaHref: "/marrakech-tours",
   },
   {
     badge: "group",
@@ -53,8 +53,8 @@ const options: TourOption[] = [
       "Fixed departure dates",
       "Meet travelers from around the world",
     ],
-    ctaLabel: "Book Share Group",
-    ctaHref: "/tours/group",
+    ctaLabel: "View Share Group",
+    ctaHref: "/shared-group-tours",
   },
 ];
 

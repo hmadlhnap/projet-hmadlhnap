@@ -110,9 +110,9 @@ export const activities: Activity[] = [
         "air balloon ride marrakech",
         "hot air balloon marrakech",
         "marrakech balloon ride",
-        "hot air balloon morocco",
-        "marrakech activities",
-        "atlas mountains balloon ride",
+        "morocco hot air balloon",
+        "fun things to do in marrakech",
+        "morocco hot air balloons",
       ],
     },
 
@@ -290,6 +290,7 @@ export const activities: Activity[] = [
       keywords: [
         "marrakech tour guide",
         "marrakech guided tour",
+        "marrakech private tour guide",
         "marrakech city tour",
         "private guide marrakech",
         "marrakech medina tour",
@@ -400,7 +401,6 @@ export const activities: Activity[] = [
     included: [
       "Professional local Marrakech guide",
       "Private guided walking tour",
-      "Medina orientation",
       "Visit to traditional souks",
       "Historical and cultural explanations",
       "Flexible walking pace",
