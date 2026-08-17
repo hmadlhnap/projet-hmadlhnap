@@ -109,7 +109,7 @@ export default function TourCard({ tour }: TourCardProps) {
               </>
             ) : (
               <span className="text-sm font-semibold text-text-secondary">
-                Contact for price
+                View details
               </span>
             )}
           </div>

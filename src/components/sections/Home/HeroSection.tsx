@@ -28,7 +28,7 @@ export default function HeroSection(): React.JSX.Element {
         <div className="relative mx-auto flex min-h-[560px] max-w-7xl flex-col items-center justify-center lg:min-h-[620px]">
           <div className="max-w-4xl">
             <h1 className="text-4xl font-bold text-center leading-tight text-white sm:text-5xl lg:text-6xl">
-              Marrakech Package
+              Marrakech Tour Package
             </h1>
 
             <p className="mt-4 text-lg text-center font-bold text-white sm:text-xl">
