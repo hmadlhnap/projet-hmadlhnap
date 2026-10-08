@@ -16,6 +16,11 @@ const nextConfig: NextConfig = {
     formats: ["image/avif", "image/webp"],
   },
 
+  experimental: {
+    staticGenerationMaxConcurrency: 3,
+    staticGenerationMinPagesPerWorker: 10,
+  },
+
   async redirects() {
     return [
       {
@@ -31,7 +36,6 @@ const nextConfig: NextConfig = {
       },
     ];
   },
-  
 };
 
 export default nextConfig;

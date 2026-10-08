@@ -259,3 +259,17 @@ html,body {
   color: hsl(var(--heading));
   font-weight: 700;
 }
+
+
+.blog-content table {
+    font-size: 0.875rem;
+  }
+
+  .blog-content th,
+  .blog-content tbody td {
+    padding: 0.7rem 0.75rem;
+  }
+
+  .blog-content blockquote {
+    padding: 1rem 1.125rem;
+  }
