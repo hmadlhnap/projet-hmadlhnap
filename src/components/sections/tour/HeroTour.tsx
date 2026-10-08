@@ -115,7 +115,7 @@ export default function HeroTour({title,tourBadge,heroDescription,heroImage,dura
               href="/contact"
               className="inline-flex min-h-10 items-center justify-center rounded-lg bg-primary px-3 py-2 font-semibold text-primary-foreground transition-colors hover:bg-primary-hover"
             >
-              Book Now
+              Get a Free Quote
             </Link>
           </div>
         </div>

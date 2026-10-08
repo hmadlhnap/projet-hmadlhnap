@@ -16,6 +16,7 @@ import { getCarteDayTrip } from "@/lib/daytrips";
 import { getToursByDepartureAndType } from "@/lib/tours";
 import {Heart,Palmtree,ShieldCheck,UserRound,Users,UsersRound,} from "lucide-react";
 import { createHomeJsonLd } from "@/components/seo/homeSeoJson";
+import TripAdvisorReviews from "@/components/sections/Home/TripAdvisorReviews";
 
 const TRAVEL_STYLES = [
   {
@@ -158,6 +159,7 @@ export default async function Home() {
       <HeroSection />
       <Toptours tours={toptours} />
       <WhyChooseUs />
+      <TripAdvisorReviews />
       <DesertExperienceSelector />
       <Topdaytrips dayTrips={dayTrips} activities={activities} />
       <SharedGroupOffer />

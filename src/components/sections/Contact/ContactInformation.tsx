@@ -1,11 +1,8 @@
 import { Mail } from "lucide-react";
 import { ContactItem } from "@/type/contact";
 
-export default function ContactInformation({
-  ITEMS,
-}: {
-  ITEMS: ContactItem[];
-}): React.JSX.Element {
+
+export default function ContactInformation({ITEMS,}: {ITEMS: ContactItem[];}): React.JSX.Element {
   return (
     <div
       id="contact-form"

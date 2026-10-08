@@ -41,7 +41,7 @@ export default function DayTripWhatsAppForm({dayTripTitle,price,priceLabel,}: Da
         </div>
 
         <h2 className="mt-4 text-3xl font-bold leading-tight text-primary-foreground">
-          Ask About This Day Trip
+          Ask About This Trip
         </h2>
 
         <p className="mt-2 text-sm leading-6 text-primary-foreground/90">

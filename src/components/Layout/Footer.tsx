@@ -98,7 +98,7 @@ export default function Footer() {
 
             <ul className="mt-6 space-y-5">
               {CONTACT_INFO.map(({ icon: Icon, label, href }) => (
-                <li key={label} className="flex items-center gap-3">
+                <li key={href ?? label} className="flex items-center gap-3">
                   <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-primary text-primary">
                     <Icon className="h-4 w-4" />
                   </span>

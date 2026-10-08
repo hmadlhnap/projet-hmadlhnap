@@ -58,7 +58,7 @@ export default function ContactHero({ numero }: { numero: string }): React.JSX.E
                 className="inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-lg transition-colors hover:bg-primary-hover"
               >
                 <FaWhatsapp className="h-4 w-4" aria-hidden="true" />
-                WhatsApp Us
+                Get a free quote via WhatsApp
               </a>
             </div>
           </div>
