@@ -84,10 +84,12 @@ const FAQ_IDS = [
   },
 ];
 
+
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL?.trim().replace(/\/+$/, "") || "https://marrakechpackage.com";
 
-const HOME_TITLE = "Marrakech Package | Morocco Tour Guide";
+const HOME_TITLE = "Morocco Tour Guide | Marrakech Tours & Desert Trips";
 const HOME_DESCRIPTION = "Marrakech Package offers private Morocco tours, shared group tours, Sahara desert trips, day trips from Marrakech and local activities across Morocco.";
+
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
